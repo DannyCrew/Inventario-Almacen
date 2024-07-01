@@ -1,5 +1,8 @@
 package inventario_almacen;
-
+/**
+ *
+ * @author Danny
+ */
 import java.sql.*;
 
 public class InventarioModel {
