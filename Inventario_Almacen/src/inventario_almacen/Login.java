@@ -1,5 +1,8 @@
 package inventario_almacen;
-
+/**
+ *
+ * @author Danny
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
