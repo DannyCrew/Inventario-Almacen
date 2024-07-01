@@ -12,10 +12,11 @@ Este repositorio contiene un sistema de gestión de inventario desarrollado en J
 
 ## Tecnologías Utilizadas
 
-- Java
-- MySQL
-- Swing (para la interfaz gráfica)
-- JDBC (para la conexión a la base de datos)
+- Java ![Java Icon](https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png)
+- MySQL ![MySQL Icon](https://img.icons8.com/ios-filled/50/000000/mysql-logo.png)
+- Swing (para la interfaz gráfica) ![Swing Icon](https://img.icons8.com/nolan/64/java-eclipse.png)
+- JDBC (para la conexión a la base de datos) ![JDBC Icon](https://img.icons8.com/color/48/000000/database.png)
+
 
 ## Instrucciones de Uso
 
