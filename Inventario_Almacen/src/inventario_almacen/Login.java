@@ -30,15 +30,54 @@ public class Login extends JFrame {
         txtContraseña = new JPasswordField(15);
         btnLogin = new JButton("Login");
 
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(3, 2));
-        panel.add(new JLabel("Email:"));
-        panel.add(txtEmail);
-        panel.add(new JLabel("Contraseña:"));
-        panel.add(txtContraseña);
-        panel.add(btnLogin);
+         // Panel principal
+        JPanel panel = new JPanel(new GridBagLayout());
+        panel.setBackground(new Color(245, 245, 245)); // Fondo claro
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10); // Margen entre componentes
 
-        add(panel);
+        JLabel lblEmail = new JLabel("Email:");
+        lblEmail.setFont(new Font("Arial", Font.BOLD, 14));
+        lblEmail.setForeground(new Color(0, 102, 204)); // Azul oscuro
+
+        txtEmail = new JTextField(15);
+        txtEmail.setFont(new Font("Arial", Font.PLAIN, 14));
+        txtEmail.setBorder(BorderFactory.createLineBorder(new Color(0, 102, 204))); // Borde azul
+
+        JLabel lblContraseña = new JLabel("Contraseña:");
+        lblContraseña.setFont(new Font("Arial", Font.BOLD, 14));
+        lblContraseña.setForeground(new Color(0, 102, 204));
+
+        txtContraseña = new JPasswordField(15);
+        txtContraseña.setFont(new Font("Arial", Font.PLAIN, 14));
+        txtContraseña.setBorder(BorderFactory.createLineBorder(new Color(0, 102, 204)));
+
+        btnLogin = new JButton("Login");
+        btnLogin.setFont(new Font("Arial", Font.BOLD, 14));
+        btnLogin.setBackground(new Color(0, 102, 204));
+        btnLogin.setForeground(Color.WHITE);
+        btnLogin.setFocusPainted(false);
+        btnLogin.setBorderPainted(false);
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        panel.add(lblEmail, gbc);
+
+        gbc.gridx = 1;
+        panel.add(txtEmail, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        panel.add(lblContraseña, gbc);
+
+        gbc.gridx = 1;
+        panel.add(txtContraseña, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        panel.add(btnLogin, gbc);
+
+        add(panel, BorderLayout.CENTER);
 
         btnLogin.addActionListener((ActionEvent e) -> {
             login();
