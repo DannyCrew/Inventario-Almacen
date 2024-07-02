@@ -95,8 +95,12 @@ public class Inventario extends JFrame {
         });
 
         btnSalidaProductos.addActionListener((ActionEvent e) -> {
+            if ("Almacenista".equals(getRolUsuario())) { // Verificar el rol del usuario en la instancia actual
             SalidaProductos salidaProductos = new SalidaProductos(idUsuario);
             salidaProductos.setVisible(true);
+                } else {
+                JOptionPane.showMessageDialog(this, "No tienes permisos para acceder al historial de movimientos.");
+            }
         });
 
        btnHistorialMovimientos.addActionListener((ActionEvent e) -> {
